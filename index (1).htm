@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M-Quadruple Biotek Ltd | Leading Biosensor &amp; Diagnostic Research</title>
+<meta name="description" content="M-Quadruple Biotek Ltd specializes in cutting-edge biosensor technology and genomic surveillance for infectious diseases. Our innovative research and diagnostic solutions are transforming global healthcare.">
+<meta property="og:title" content="M-Quadruple Biotek Ltd | Leading Biosensor &amp; Diagnostic Research">
+<meta property="og:description" content="M-Quadruple Biotek Ltd specializes in cutting-edge biosensor technology and genomic surveillance for infectious diseases.">
+<meta property="og:image" content="https://mquadruple.com/research-setup.jpg">
+<link rel="icon" href="https://mquadruple.com/_next/image?url=%2Ficon.png&w=256&q=75">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1F26;
+    --ink-soft:#173039;
+    --paper:#EDEEE7;
+    --paper-dim:#E2E3D9;
+    --line:#C9CBBC;
+    --teal:#2FA99A;
+    --teal-glow:#5FD9C8;
+    --amber:#C1832E;
+    --white:#FAFAF5;
+    --serif:'Newsreader', serif;
+    --sans:'IBM Plex Sans', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+  .eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:18px; height:1px; background:var(--teal);}
+  h1,h2,h3{font-family:var(--serif); font-weight:500; line-height:1.1; color:var(--ink);}
+  .btn{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:13px; letter-spacing:.03em; padding:13px 22px; border-radius:3px; border:1px solid var(--ink); transition:all .25s ease;}
+  .btn-solid{background:var(--ink); color:var(--paper);}
+  .btn-solid:hover{background:var(--teal); border-color:var(--teal); color:var(--ink);}
+  .btn-outline{border-color:var(--ink); color:var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:var(--paper);}
+  .btn-outline.on-dark{border-color:rgba(250,250,245,.4); color:var(--white);}
+  .btn-outline.on-dark:hover{background:var(--white); color:var(--ink); border-color:var(--white);}
+
+  header{position:sticky; top:0; z-index:50; background:rgba(237,238,231,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1180px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-size:19px; font-weight:600;}
+  .brand-mark{width:30px; height:30px; flex-shrink:0;}
+  .nav-links{display:flex; gap:32px; font-size:14px; font-family:var(--mono);}
+  .nav-links a{opacity:.75; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{display:flex; align-items:center; gap:20px;}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .burger span{width:22px; height:1.5px; background:var(--ink);}
+
+  .hero{position:relative; overflow:hidden; background:var(--ink); color:var(--white);}
+  .hero-grid{max-width:1180px; margin:0 auto; padding:0 28px; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; min-height:84vh; gap:40px;}
+  .hero h1{font-size:clamp(34px,4.6vw,54px); color:var(--white); margin:18px 0 22px; letter-spacing:-.01em;}
+  .hero p{max-width:460px; color:rgba(250,250,245,.72); font-size:16.5px; margin-bottom:34px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  .hero-visual{position:relative;}
+  .hero-visual-frame{position:relative; border:1px solid rgba(95,217,200,.35); padding:14px;}
+  .hero-visual-frame img{border-radius:1px; filter:saturate(.9) contrast(1.05);}
+  .hero-noise{position:absolute; inset:0; opacity:.05; background-image:radial-gradient(rgba(255,255,255,.7) 1px, transparent 1px); background-size:22px 22px; pointer-events:none;}
+
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px); margin-top:14px;}
+  .section-head p{color:var(--ink-soft); margin-top:14px; font-size:16px;}
+
+  .founder{background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .founder-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:start;}
+  .founder-photo{position:relative;}
+  .founder-photo img{border-radius:2px; filter:grayscale(.15) contrast(1.03);}
+  .founder-frame{position:absolute; inset:16px -16px -16px 16px; border:1px solid var(--teal); z-index:-1;}
+  .founder-name{font-family:var(--serif); font-size:30px; margin-top:24px;}
+  .founder-title{font-family:var(--mono); font-size:12.5px; color:var(--teal); letter-spacing:.05em; text-transform:uppercase; margin-top:6px;}
+  .founder-bio p{margin-bottom:16px; color:var(--ink-soft); font-size:15.5px;}
+  .founder-list{list-style:none; margin-top:26px; border-top:1px solid var(--line);}
+  .founder-list li{display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--line); font-size:14.5px; color:var(--ink);}
+  .founder-list li::before{content:'✓'; font-family:var(--mono); color:var(--teal); flex-shrink:0; font-size:13px; margin-top:1px;}
+
+  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .service-card{background:var(--paper); padding:36px 32px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between;}
+  .service-index{font-family:var(--mono); font-size:12px; color:var(--teal);}
+  .service-card h3{font-size:22px; margin-top:26px;}
+  .service-card p{color:var(--ink-soft); font-size:14.5px; margin-top:10px;}
+
+  .split-band{display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .band-cell{padding:64px 48px;}
+  .band-cell + .band-cell{border-left:1px solid var(--line); background:var(--white);}
+  .band-cell h3{font-size:26px; margin-top:12px;}
+  .band-cell p{color:var(--ink-soft); margin:14px 0 26px; font-size:15px;}
+  .phone-line{font-family:var(--mono); font-size:15px; margin-top:18px; letter-spacing:.02em;}
+
+  .expertise{background:var(--ink); color:var(--white);}
+  .expertise .section-head p{color:rgba(250,250,245,.65);}
+  .expertise .eyebrow{color:var(--teal-glow);}
+  .expertise .eyebrow::before{background:var(--teal-glow);}
+  .expertise-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .expertise-card{background:var(--ink-soft); border:1px solid rgba(250,250,245,.1); overflow:hidden; border-radius:3px;}
+  .expertise-card img{height:190px; object-fit:cover; width:100%; filter:saturate(.85) contrast(1.05);}
+  .expertise-body{padding:24px 24px 28px;}
+  .expertise-body h3{color:var(--white); font-size:19px;}
+  .expertise-body p{color:rgba(250,250,245,.62); font-size:14px; margin-top:10px;}
+
+  .equip-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:32px;}
+  .equip-card img{aspect-ratio:4/3; object-fit:cover; border-radius:2px;}
+  .equip-card h3{font-size:18px; margin-top:16px;}
+  .equip-card p{color:var(--ink-soft); font-size:14px; margin-top:8px;}
+
+  .gallery{background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .gallery-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:6px;}
+  .gallery-grid img{aspect-ratio:1/1; object-fit:cover; filter:grayscale(1) contrast(1.05); transition:filter .4s ease;}
+  .gallery-grid img:hover{filter:grayscale(0);}
+
+  .cta{background:var(--ink); color:var(--white); text-align:center;}
+  .cta h2{color:var(--white); font-size:clamp(28px,4vw,44px); max-width:640px; margin:0 auto 30px;}
+  .cta-actions{display:flex; justify-content:center; gap:14px; flex-wrap:wrap;}
+
+  footer{padding:64px 0 36px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:48px; border-bottom:1px solid var(--line);}
+  .footer-brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-size:19px; font-weight:600; margin-bottom:14px;}
+  .footer-grid p{color:var(--ink-soft); font-size:14px; max-width:280px;}
+  .footer-col h4{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--teal); margin-bottom:16px;}
+  .footer-col a, .footer-col div{display:block; font-size:14.5px; color:var(--ink-soft); margin-bottom:10px;}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:26px; font-size:12.5px; color:var(--ink-soft); font-family:var(--mono);}
+
+  [data-reveal]{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  [data-reveal].in{opacity:1; transform:none;}
+
+  .placeholder-tag{font-family:var(--mono); font-size:10.5px; color:var(--amber); text-transform:uppercase; letter-spacing:.04em; margin-top:2px; display:block;}
+
+  .stats{background:var(--ink); border-bottom:1px solid rgba(250,250,245,.12);}
+  .stats-grid{display:grid; grid-template-columns:repeat(4,1fr); padding-top:40px;}
+  .stat{padding:0 28px 40px; border-left:1px solid rgba(250,250,245,.12);}
+  .stat:first-child{border-left:none;}
+  .stat-num{font-family:var(--serif); font-size:clamp(28px,3.4vw,42px); color:var(--teal-glow);}
+  .stat-label{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:rgba(250,250,245,.55); margin-top:8px;}
+  .stats .placeholder-tag{color:var(--amber);}
+
+  .pub-list{border-top:1px solid var(--line);}
+  .pub-row{display:flex; justify-content:space-between; gap:24px; padding:26px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;}
+  .pub-title{font-family:var(--serif); font-size:19px; max-width:640px;}
+  .pub-meta{font-family:var(--mono); font-size:12px; color:var(--teal); text-transform:uppercase; letter-spacing:.04em; white-space:nowrap;}
+
+  .faq-section{background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .faq-item2{border-bottom:1px solid var(--line);}
+  .faq-item2:first-child{border-top:1px solid var(--line);}
+  .faq-q2{width:100%; text-align:left; background:none; border:none; padding:22px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-family:var(--sans); font-size:16px; font-weight:500; color:var(--ink);}
+  .faq-q2 .plus{font-family:var(--mono); color:var(--teal); font-size:18px; transition:transform .25s ease;}
+  .faq-item2.open .plus{transform:rotate(45deg);}
+  .faq-a2{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+  .faq-a2 p{color:var(--ink-soft); font-size:14.5px; padding-bottom:22px; max-width:640px;}
+
+  .contact-section{background:var(--ink); color:var(--white);}
+  .contact-grid2{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px;}
+  .contact-grid2 .eyebrow{color:var(--teal-glow);}
+  .contact-grid2 .eyebrow::before{background:var(--teal-glow);}
+  .contact-grid2 p{color:rgba(250,250,245,.62); margin-top:16px; font-size:15px; max-width:400px;}
+  .contact-info-item{margin-top:24px; font-family:var(--mono); font-size:13.5px; color:rgba(250,250,245,.75);}
+  .form-row2{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
+  .field2 label{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:rgba(250,250,245,.5); margin-bottom:8px;}
+  .field2 input, .field2 textarea, .field2 select{
+    width:100%; background:rgba(250,250,245,.05); border:1px solid rgba(250,250,245,.2);
+    color:var(--white); padding:12px 14px; font-family:var(--sans); font-size:14.5px; border-radius:2px;
+  }
+  .field2 input:focus, .field2 textarea:focus, .field2 select:focus{outline:none; border-color:var(--teal-glow);}
+  .field2 textarea{resize:vertical; min-height:110px;}
+  .form-submit2{margin-top:6px; background:var(--teal-glow); border-color:var(--teal-glow); color:var(--ink); cursor:pointer;}
+  .form-note2{font-size:12px; color:rgba(250,250,245,.4); margin-top:14px; font-family:var(--mono);}
+
+  .img-box{background:var(--paper-dim);}
+  img{background:var(--paper-dim);}
+  .hero-visual-frame img, .founder-photo img{background:var(--paper-dim);}
+
+  @media(max-width:900px){
+    .stats-grid{grid-template-columns:repeat(2,1fr); padding-top:24px;}
+    .stat{padding:0 20px 24px;}
+    .stat:nth-child(3){border-left:none;}
+    .pub-row{flex-direction:column; gap:6px;}
+    .contact-grid2{grid-template-columns:1fr;}
+    .form-row2{grid-template-columns:1fr;}
+  }
+
+  @media(max-width:520px){
+  }
+
+  @media(max-width:900px){
+    .nav-links{display:none;}
+    .nav-links a{color:var(--ink); text-align:left;}
+    .burger{display:flex;}
+    .hero-grid{grid-template-columns:1fr; min-height:auto; padding-top:56px; padding-bottom:56px;}
+    .hero-visual{order:-1;}
+    .founder-grid{grid-template-columns:1fr; gap:36px;}
+    .founder-frame{display:none;}
+    .services-grid{grid-template-columns:1fr;}
+    .expertise-grid{grid-template-columns:1fr;}
+    .split-band{grid-template-columns:1fr;}
+    .band-cell + .band-cell{border-left:none; border-top:1px solid var(--line);}
+    .equip-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(3,1fr);}
+    .footer-grid{grid-template-columns:1fr; gap:28px;}
+    .footer-bottom{flex-direction:column; gap:8px; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="https://mquadruple.com/" class="brand">
+      <svg class="brand-mark" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="13" stroke="#2FA99A" stroke-width="1.4"/><path d="M6 17c2-6 5-9 9-9s7 3 9 9" stroke="#2FA99A" stroke-width="1.4" fill="none"/><circle cx="15" cy="15" r="2.4" fill="#2FA99A"/></svg>
+      M-Quadruple
+    </a>
+    <nav class="nav-links">
+      <a href="https://mquadruple.com/">Home</a>
+      <a href="https://mquadruple.com/about">About Us</a>
+      <a href="#publications">Publications</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact-form">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://mquadruple.com/book-appointment" class="btn btn-solid">Book Appointment</a>
+      <button class="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">M-Quadruple Biotek Ltd</div>
+      <h1>Biosensor Biotechnology and Genomic Surveillance</h1>
+      <p>We're experienced researchers at the forefront of revolutionizing diagnostic research through groundbreaking innovation and pioneering advancements.</p>
+      <div class="hero-actions">
+        <a href="https://mquadruple.com/book-appointment" class="btn btn-solid">Book Appointment</a>
+        <a href="https://mquadruple.com/about" class="btn btn-outline on-dark">Learn more →</a>
+        <a href="#stats" class="btn btn-outline on-dark">Lab at a glance</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <img src="https://mquadruple.com/_next/image?url=%2Fdiagnostic-test.jpg&w=828&q=75" alt="Diagnostic test sample" width="828" height="620" loading="eager" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats" id="stats">
+  <div class="wrap stats-grid" data-reveal>
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Core biosensor techniques — EIS, CV, chronoamperometry</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2</div>
+      <div class="stat-label">International research partners</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1</div>
+      <div class="stat-label">USAID / ARNTD research grant</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Main service lines — devices, aptamers, training</div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-bottom:28px;"><span class="placeholder-tag">Sample figures — send your verified numbers to replace these</span></div>
+</div>
+
+<section class="founder">
+  <div class="wrap founder-grid">
+    <div data-reveal>
+      <div class="founder-photo">
+        <div class="founder-frame"></div>
+        <img src="https://mquadruple.com/_next/image?url=%2Fdr-ogunmolasuyi.jpg&w=600&q=70" alt="Dr Adewoyin M. Ogunmolasuyi" width="600" height="750" loading="lazy" decoding="async">
+      </div>
+      <div class="founder-name">Dr. Adewoyin M. Ogunmolasuyi</div>
+      <div class="founder-title">PhD · Founder &amp; CEO, M-Quadruple Biotek Ltd</div>
+    </div>
+    <div data-reveal>
+      <div class="eyebrow">Unveiling Biosensing &amp; Diagnostics</div>
+      <h2 style="font-size:32px; margin-top:16px;">In a Pioneering Lab</h2>
+      <div class="founder-bio" style="margin-top:22px;">
+        <p>Dr Adewoyin M. Ogunmolasuyi is an emerging African researcher with global ambitions to deliver innovations in medical diagnostics, using novel biomedical engineering, including expertise in microfluidics and biosensing.</p>
+        <p>During his doctoral studies, he constructed a microfluidic paper analytical device (µPAD) of similar geometry to lateral flow device to deliver an aptamer-tethered enzyme capture (APTEC) and enzyme-linked oligonucleotide assays for detection of Plasmodium falciparum lactate dehydrogenase in malaria.</p>
+      </div>
+      <ul class="founder-list">
+        <li>Employed several electrochemical biosensor designs including electrochemical impedance spectroscopy (EIS), cyclic voltammetry (CV), chronoamperometry</li>
+        <li>Awarded research grant internationally by USAID through African Research Network for Neglected Tropical Diseases (ARNTD) for low-cost diagnostic tests</li>
+        <li>Developed international consortium with University of Glasgow and Rhodes University with networks of collaborators in Nigeria</li>
+      </ul>
+      <a href="https://mquadruple.com/about" class="btn btn-outline" style="margin-top:28px;">Read more</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Our Main Services</div>
+      <h2>We offer comprehensive solutions in biotechnology and research</h2>
+    </div>
+    <div class="services-grid" data-reveal>
+      <div class="service-card">
+        <div class="service-index">01</div>
+        <div>
+          <h3>Design and Manufacture</h3>
+          <p>Design and Manufacture of point-of-care devices</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-index">02</div>
+        <div>
+          <h3>Aptamer Research</h3>
+          <p>Cutting-edge Aptamer Research services</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-index">03</div>
+        <div>
+          <h3>Training</h3>
+          <p>Trainings and Workshops for professionals</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="split-band">
+  <div class="band-cell" data-reveal>
+    <div class="eyebrow">Our Location</div>
+    <h3>Akure, Ondo State, Nigeria.</h3>
+    <a href="https://www.google.com/maps/dir/Academic+Building,+Ipinsa+340110,+Ondo/@7.3587845,3.1665379,8z" class="btn btn-outline">Get Direction →</a>
+  </div>
+  <div class="band-cell" data-reveal>
+    <div class="eyebrow">Make An Appointment</div>
+    <h3>Schedule online or call us</h3>
+    <p>Looking for accurate diagnostics research? Our top-notch services help you take control of your work. Collaboration is quick and easy - schedule online or call us.</p>
+    <a href="https://mquadruple.com/book-appointment" class="btn btn-solid">Get Started</a>
+    <div class="phone-line">+234 8036927285</div>
+  </div>
+</div>
+
+<section class="expertise">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">What we do</div>
+      <h2>Here are some of the areas we excel in the most</h2>
+    </div>
+    <div class="expertise-grid" data-reveal>
+      <div class="expertise-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fbiosensor-training.jpg&w=600&q=65" alt="Biosensor training in laboratory" width="600" height="380" loading="lazy" decoding="async">
+        <div class="expertise-body">
+          <h3>Biosensor Training</h3>
+          <p>Our training programs focus on the fabrication of biosensors, specializing in colorimetric, electrochemical, and molecular diagnostics to empower the next generation of diagnostic professionals.</p>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fpathogen-analysis.jpg&w=600&q=65" alt="Pathogen analysis visualization" width="600" height="380" loading="lazy" decoding="async">
+        <div class="expertise-body">
+          <h3>Pathogen Analysis</h3>
+          <p>We provide in-depth molecular and microbiology analysis of pathogens through advanced assays such as polymerase chain reaction (PCR), Loop mediated sequence amplification (LAMP), and Recombinase polymerase amplification (RPA).</p>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fmicrofluidic-diagnostics.jpg&w=600&q=65" alt="Microfluidic diagnostic device" width="600" height="380" loading="lazy" decoding="async">
+        <div class="expertise-body">
+          <h3>Microfluidic Diagnostics</h3>
+          <p>We specialize in creating cutting-edge point-of-care diagnostic devices for infectious diseases, utilizing advanced microfluidic technology to ensure rapid and accurate results.</p>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Faptamer-research.jpg&w=600&q=65" alt="Aptamer research in laboratory" width="600" height="380" loading="lazy" decoding="async">
+        <div class="expertise-body">
+          <h3>Aptamer Research</h3>
+          <p>Our team conducts pioneering research in aptamers using SELEX (systematic evolution of ligands by exponential enrichment) technology, advancing both therapeutic and diagnostic applications.</p>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fdiagnostics.jpg&w=600&q=65" alt="Diagnostic solutions in laboratory" width="600" height="380" loading="lazy" decoding="async">
+        <div class="expertise-body">
+          <h3>Diagnostic Solutions</h3>
+          <p>We offer expert technical assistance and cutting-edge technology to diagnostics companies, enhancing their capabilities and ensuring the highest standards of diagnostic accuracy.</p>
+        </div>
+      </div>
+      <div class="expertise-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fthermocycler.jpg&w=600&q=65" alt="Merchandising in store" width="600" height="380" loading="lazy" decoding="async">
+        <div class="expertise-body">
+          <h3>General Merchandising</h3>
+          <p>Our store offers quality research merchandise for all your scientific needs. From lab equipment to specialized tools, we cater for researchers' requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipment">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Laboratory Equipments</div>
+      <h2>Here are some of our equipments and devices which we make use of during research</h2>
+    </div>
+    <div class="equip-grid" data-reveal>
+      <div class="equip-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fthermocycler.jpg&w=600&q=65" alt="Thermocycler" width="600" height="450" loading="lazy" decoding="async">
+        <h3>Thermocycler</h3>
+        <p>Advanced PCR thermocycler for DNA amplification</p>
+      </div>
+      <div class="equip-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fresearch-setup.jpg&w=600&q=65" alt="Research Setup" width="600" height="450" loading="lazy" decoding="async">
+        <h3>Research Setup</h3>
+        <p>Complete laboratory research setup with essential tools</p>
+      </div>
+      <div class="equip-card">
+        <img src="https://mquadruple.com/_next/image?url=%2Fspectrophotometer.jpg&w=600&q=65" alt="Spectrophotometer" width="600" height="450" loading="lazy" decoding="async">
+        <h3>Spectrophotometer</h3>
+        <p>High-precision spectrophotometer for molecular analysis</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Gallery</div>
+      <h2>A selection of images showcasing our lab work, devices, and training.</h2>
+    </div>
+  </div>
+  <div class="gallery-grid" data-reveal>
+    <img src="https://mquadruple.com/_next/image?url=%2Fmicrofluidic-device.jpg&w=320&q=60" alt="Microfluidic device" width="320" height="320" loading="lazy" decoding="async">
+    <img src="https://mquadruple.com/_next/image?url=%2Flateral-flow-strip.jpeg&w=320&q=60" alt="Lateral flow strip" width="320" height="320" loading="lazy" decoding="async">
+    <img src="https://mquadruple.com/_next/image?url=%2Faptamer-research.jpg&w=320&q=60" alt="Aptamer research" width="320" height="320" loading="lazy" decoding="async">
+    <img src="https://mquadruple.com/_next/image?url=%2Fbiosensor-training.jpg&w=320&q=60" alt="Biosensor training" width="320" height="320" loading="lazy" decoding="async">
+    <img src="https://mquadruple.com/_next/image?url=%2Fmicrofluidics-2.jpg&w=320&q=60" alt="Microfluidics lab" width="320" height="320" loading="lazy" decoding="async">
+    <img src="https://mquadruple.com/_next/image?url=%2Fstudents.jpg&w=320&q=60" alt="Students in lab" width="320" height="320" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Publications</div>
+      <h2>Selected research</h2>
+    </div>
+    <div class="pub-list" data-reveal>
+      <div class="pub-row">
+        <div class="pub-title">Aptamer-tethered enzyme capture (APTEC) on a paper-based microfluidic device for malaria biomarker detection</div>
+        <div class="pub-meta">Sample entry · journal &amp; year</div>
+      </div>
+      <div class="pub-row">
+        <div class="pub-title">Electrochemical impedance spectroscopy for low-cost detection of neglected tropical disease biomarkers</div>
+        <div class="pub-meta">Sample entry · journal &amp; year</div>
+      </div>
+      <div class="pub-row">
+        <div class="pub-title">Isothermal amplification strategies for point-of-care pathogen surveillance</div>
+        <div class="pub-meta">Sample entry · journal &amp; year</div>
+      </div>
+    </div>
+    <span class="placeholder-tag" style="margin-top:16px;">Placeholder titles — send your real publication list to swap these in</span>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Questions</div>
+      <h2>Frequently asked</h2>
+    </div>
+    <div data-reveal>
+      <div class="faq-item2">
+        <button class="faq-q2">Who is M-Quadruple's work for? <span class="plus">+</span></button>
+        <div class="faq-a2"><p>Diagnostics companies needing device design or technical support, academic collaborators working on biosensor or aptamer research, and students or professionals seeking hands-on training.</p></div>
+      </div>
+      <div class="faq-item2">
+        <button class="faq-q2">How long does a typical device engagement take? <span class="plus">+</span></button>
+        <div class="faq-a2"><p>It depends on scope — a proof-of-concept prototype can take a few weeks, while a fully validated point-of-care device with field testing runs several months. Timelines are scoped during consultation.</p></div>
+      </div>
+      <div class="faq-item2">
+        <button class="faq-q2">Do you offer training for individuals, not just organisations? <span class="plus">+</span></button>
+        <div class="faq-a2"><p>Yes. We run workshops for individual researchers and students in addition to organisation-level training.</p></div>
+      </div>
+      <div class="faq-item2">
+        <button class="faq-q2">Can you work with international collaborators remotely? <span class="plus">+</span></button>
+        <div class="faq-a2"><p>Yes — early-stage design and data review can happen remotely, with prototyping and validation done in-lab in Akure.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap" data-reveal>
+    <div class="eyebrow" style="justify-content:center; color:var(--teal-glow);">Need Quick Assistance?</div>
+    <h2 style="margin-top:16px;">Schedule a consultation with our experts.</h2>
+    <div class="cta-actions">
+      <a href="https://mquadruple.com/book-appointment" class="btn btn-solid" style="background:var(--teal-glow); border-color:var(--teal-glow); color:var(--ink);">Book Consultation</a>
+      <a href="#contact-form" class="btn btn-outline on-dark">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact-form">
+  <div class="wrap contact-grid2">
+    <div data-reveal>
+      <div class="eyebrow">Get in touch</div>
+      <h2 style="color:var(--white); font-size:clamp(26px,3vw,36px); margin-top:14px;">Start a conversation</h2>
+      <p>Tell us about your diagnostic challenge, research idea, or training need.</p>
+      <div class="contact-info-item">Phone: +234 8039272785</div>
+      <div class="contact-info-item">Email: info@mquadruple.com</div>
+      <div class="contact-info-item">Akure, Ondo State, Nigeria</div>
+    </div>
+    <form data-reveal onsubmit="return handleContactSubmit(event)">
+      <div class="form-row2">
+        <div class="field2">
+          <label for="cf-name">Full name</label>
+          <input id="cf-name" type="text" required>
+        </div>
+        <div class="field2">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" type="email" required>
+        </div>
+      </div>
+      <div class="form-row2">
+        <div class="field2">
+          <label for="cf-org">Organisation (optional)</label>
+          <input id="cf-org" type="text">
+        </div>
+        <div class="field2">
+          <label for="cf-type">Reason for contact</label>
+          <select id="cf-type">
+            <option>Device design &amp; manufacture</option>
+            <option>Aptamer research</option>
+            <option>Training / workshop</option>
+            <option>Collaboration / partnership</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+      <div class="field2" style="margin-bottom:20px;">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" required></textarea>
+      </div>
+      <button type="submit" class="btn form-submit2">Send message →</button>
+      <div class="form-note2" id="cf-status">This opens your email app addressed to info@mquadruple.com — no page redirect.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="13" stroke="#2FA99A" stroke-width="1.4"/><path d="M6 17c2-6 5-9 9-9s7 3 9 9" stroke="#2FA99A" stroke-width="1.4" fill="none"/><circle cx="15" cy="15" r="2.4" fill="#2FA99A"/></svg>
+          M-Quadruple Biotek Ltd
+        </div>
+        <p>Advancing diagnostics with accessible biosensor technology.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div>Phone: +234 8039272785</div>
+        <div>Email: info@mquadruple.com</div>
+        <div>Akure, Ondo, Nigeria</div>
+      </div>
+      <div class="footer-col">
+        <h4>What we do</h4>
+        <a href="#publications">Publications</a>
+        <a href="#stats">Lab at a glance</a>
+        <h4 style="margin-top:22px;">Follow</h4>
+        <p style="margin-bottom:12px;">Follow us for updates on publications and events.</p>
+        <div style="display:flex; gap:16px;">
+          <a href="https://mquadruple.com/">Twitter</a><a href="https://mquadruple.com/">LinkedIn</a><a href="https://mquadruple.com/">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 M-Quadruple Biotek Ltd</div>
+      <div>All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const items = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  items.forEach(i=>io.observe(i));
+
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+  burger.addEventListener('click', ()=>{
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.style.cssText += 'flex-direction:column; align-items:flex-start; position:absolute; top:64px; left:0; right:0; background:var(--paper); padding:20px 28px; border-bottom:1px solid var(--line); gap:16px;';
+  });
+
+  document.querySelectorAll('.faq-item2').forEach(item=>{
+    const q = item.querySelector('.faq-q2');
+    const a = item.querySelector('.faq-a2');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item2.open').forEach(o=>{ o.classList.remove('open'); o.querySelector('.faq-a2').style.maxHeight = null; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+
+  function handleContactSubmit(e){
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value;
+    const email = document.getElementById('cf-email').value;
+    const org = document.getElementById('cf-org').value;
+    const type = document.getElementById('cf-type').value;
+    const message = document.getElementById('cf-message').value;
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nOrganisation: ${org || 'N/A'}\nSubject: ${type}\n\n${message}`);
+    window.location.href = `mailto:info@mquadruple.com?subject=${encodeURIComponent('Website enquiry — ' + type)}&body=${body}`;
+    document.getElementById('cf-status').textContent = 'Opening your mail client…';
+    return false;
+  }
+</script>
+
+</body>
+</html>
